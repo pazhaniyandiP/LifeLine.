@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LifeLine - Personal Emergency Support System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>LifeLine – Personal Emergency & Support System</h1>
+    <p>Made for real world safety & wellbeing</p>
+</header>
+
+<nav>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('sos')">SOS Help</button>
+    <button onclick="showSection('health')">Health & Medical</button>
+    <button onclick="showSection('calm')">Calm Assistant</button>
+    <button onclick="showSection('settings')">Settings</button>
+</nav>
+
+<section id="dashboard" class="content-section">
+    <h2>Smart Daily Safety Dashboard</h2>
+
+    <div class="card">
+        <h3>Water Reminder</h3>
+        <p id="waterStatus">Not yet reminded</p>
+        <button onclick="remindWater()">Remind Me</button>
+    </div>
+
+    <div class="card">
+        <h3>Medicine Reminder</h3>
+        <p id="medicineStatus">No reminder set</p>
+        <button onclick="remindMedicine()">Set Reminder</button>
+    </div>
+
+    <div class="card">
+        <h3>Activity Monitor</h3>
+        <p id="motionStatus">No unusual movement detected</p>
+        <button onclick="simulateShake()">Simulate Panic Shake</button>
+    </div>
+</section>
+
+
+<section id="sos" class="content-section hidden">
+    <h2>Emergency SOS Center</h2>
+
+    <button class="sos-btn" onclick="triggerSOS()">SEND SOS ALERT</button>
+
+    <p id="sosOutput"></p>
+
+    <h3>Emergency Actions</h3>
+    <ul>
+        <li>Share live location</li>
+        <li>Alert trusted contacts</li>
+        <li>Access medical card</li>
+    </ul>
+</section>
+
+
+<section id="health" class="content-section hidden">
+    <h2>Medical & Health Profile</h2>
+
+    <label>Name: <input id="userName"></label><br>
+    <label>Blood Group: <input id="bloodGroup"></label><br>
+    <label>Allergies: <input id="allergy"></label><br>
+
+    <button onclick="saveMedical()">Save Profile</button>
+
+    <p id="saveStatus"></p>
+</section>
+
+
+<section id="calm" class="content-section hidden">
+    <h2>Calm & Anxiety Assistant</h2>
+    <h3 id="breathText">Click start to begin breathing exercise</h3>
+
+    <button onclick="startBreathing()">Start</button>
+</section>
+
+
+<section id="settings" class="content-section hidden">
+    <h2>Accessibility Settings</h2>
+
+    <button onclick="toggleTheme()">Toggle Dark / Light</button><br><br>
+
+    <button onclick="enableHighContrast()">Enable High Contrast</button><br><br>
+
+    <button onclick="enableVoice()">Enable Voice Panic Detection</button>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

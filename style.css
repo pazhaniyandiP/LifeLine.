@@ -1,0 +1,61 @@
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f2f6ff;
+    color:#222;
+}
+
+header{
+    background:#0077ff;
+    padding:20px;
+    text-align:center;
+    color:white;
+}
+
+nav{
+    background:black;
+    padding:10px;
+    text-align:center;
+}
+
+nav button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+}
+
+.content-section{
+    padding:20px;
+}
+
+.hidden{
+    display:none;
+}
+
+.card{
+    border:1px solid #ccc;
+    padding:15px;
+    width:250px;
+    display:inline-block;
+    margin:10px;
+}
+
+.sos-btn{
+    background:red;
+    color:white;
+    padding:20px;
+    font-size:20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.dark{
+    background:#111;
+    color:white;
+}
+
+.high-contrast{
+    background:black;
+    color:yellow;
+}
